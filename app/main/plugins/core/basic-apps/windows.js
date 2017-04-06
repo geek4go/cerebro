@@ -18,13 +18,23 @@ const parseFile = (filePath) => {
   }
 }
 
+/*export const DIRECTORIES = [
+  USERPROFILE && `${USERPROFILE}\\Desktop\\`,
+  APPDATA && `${APPDATA}\\Microsoft\\Windows\\Start Menu\\Programs\\`,
+  ProgramData && `${ProgramData}\\Microsoft\\Windows\\Start Menu\\Programs\\`,
+  'C:\\NetDrive\\OneDrive\\云盘备份\\ToolLinks\\'
+].filter(dir => !!dir)*/
+
 export const DIRECTORIES = [
   USERPROFILE && `${USERPROFILE}\\Desktop\\`,
   APPDATA && `${APPDATA}\\Microsoft\\Windows\\Start Menu\\Programs\\`,
-  ProgramData && `${ProgramData}\\Microsoft\\Windows\\Start Menu\\Programs\\`
+  ProgramData && `${ProgramData}\\Microsoft\\Windows\\Start Menu\\Programs\\`,
+  'C:\\NetDrive\\OneDrive\\云盘备份\\ToolLinks\\'
 ].filter(dir => !!dir)
 
-export const EXTENSIONS = ['lnk', 'exe']
+console.info(DIRECTORIES)
+
+export const EXTENSIONS = ['lnk', 'exe', 'bat']
 
 export const openApp = (app) => shell.openItem(app.source)
 
@@ -37,5 +47,5 @@ export const formatPath = (filePath) => ({
   // TODO: check if file is hidden or not
   hidden: false,
   filename: path.basename(filePath),
-  name: path.basename(filePath).replace(/\.(exe|lnk)/, ''),
+  name: path.basename(filePath).replace(/\.(exe|lnk|bat)/, ''),
 })

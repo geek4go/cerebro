@@ -6,7 +6,7 @@ import flatten from 'lodash/flatten'
 import uniq from 'lodash/uniq'
 
 const REINDEX_TIME = 30 * 60 * 1000
-const CACHE_FILE = path.join(remote.app.getPath('userData'), 'apps_cache.json')
+const CACHE_FILE = 'C:/William/SoftData/Cerebro/apps_cache.json'
 const cacheOptions = {
   encoding: 'utf-8'
 }

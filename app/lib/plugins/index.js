@@ -21,7 +21,7 @@ const EMPTY_PACKAGE_JSON = JSON.stringify({
 }, null, 2)
 
 const electronApp = remote ? remote.app : app
-export const pluginsPath = path.join(electronApp.getPath('userData'), 'plugins')
+export const pluginsPath = 'C:/William/SoftData/Cerebro/plugins'
 export const modulesDirectory = path.join(pluginsPath, 'node_modules')
 export const packageJsonPath = path.join(pluginsPath, 'package.json')
 
