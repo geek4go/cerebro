@@ -28,10 +28,7 @@ const parseFile = (filePath) => {
 ].filter(dir => !!dir)*/
 
 export const DIRECTORIES = [
-  USERPROFILE && `${USERPROFILE}\\Desktop\\`,
-  APPDATA && `${APPDATA}\\Microsoft\\Windows\\Start Menu\\Programs\\`,
-  ProgramData && `${ProgramData}\\Microsoft\\Windows\\Start Menu\\Programs\\`,
-  'C:\\NetDrive\\OneDrive\\云盘备份\\ToolLinks\\'
+  USERPROFILE && `${USERPROFILE}\\Desktop\\`
 ].filter(dir => !!dir)
 
 console.info(DIRECTORIES)

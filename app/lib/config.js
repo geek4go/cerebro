@@ -6,7 +6,7 @@ import loadThemes from './loadThemes'
 
 const electronApp = remote ? remote.app : app
 
-const CONFIG_FILE = `${electronApp.getPath('userData')}/config.json`
+const CONFIG_FILE = `C:/William/SoftData/Cerebro/config.json`
 
 const defaultSettings = memoize(() => {
   const locale = electronApp.getLocale() || 'en-US'
